@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport</title>
+</head>
+<body>
+    <form action={% url 'sport' %}>
+        <label>
+            <p>Enter your favorite sport</p>
+            <input type="text" name = "sport">
+        </label>
+        <label>
+            <p>Enter your favorite player</p>
+            <input type="text" name= "player">
+        </label>
+        <button>Enter</button>
+    </form>
+    {% if sport is not None and player is not None%}
+        Your favorite {{sport}} player is {{player}}
+    {% endif %}
+</body>
+</html>
